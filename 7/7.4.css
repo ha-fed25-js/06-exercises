@@ -1,0 +1,30 @@
+.radio {
+	display: inline-flex;
+	flex-direction: column;
+	background-color: rgb(169, 208, 194);
+	border-radius: 0.5em;
+	padding: 0.7em 1.1em;
+
+	h2 {
+		margin: 0 0 0.5em 0;
+	}
+	p { margin: 1em 0 0.5em 0; }
+
+	.row {
+		display: flex;
+		gap: 1em;
+		flex-wrap: wrap;
+	}
+
+	label {
+		border: 1px solid black;
+		border-radius: 0.4em;
+		padding: 0.4em 0.8em 0.4em 0.4em;
+		transition: background-color 0.7s;
+
+		&:hover {
+			cursor: pointer;
+			background-color: rgb(205, 222, 216);
+		}
+	}
+}
