@@ -1,0 +1,21 @@
+.children ul li {
+	transition: transform 0.7s;
+}
+
+.alternate {
+	transform: rotateZ(180deg);
+}
+
+.children, .stop { margin-top: 1em; }
+
+.container {
+	margin: 0.3em;
+	padding: 0.7em;
+	border: 2px solid rgb(134, 58, 193);
+
+	p { margin: 0.2em 0; }
+
+	&:hover {
+		box-shadow: inset 0 0 0.5em rgb(134, 58, 193);
+	}
+}
