@@ -24,30 +24,37 @@ element.classList.add('frame')
 // funktionen sätter css-klassen för den klickade knappen till "selected"
 
 const foodButtons = document.querySelectorAll('.food button')
-const meatButton = document.querySelector('#meat-button')
+/*const meatButton = document.querySelector('#meat-button')
 const fishButton = document.querySelector('#fish-button')
-const vegButton = document.querySelector('#veg-button')
+const vegButton = document.querySelector('#veg-button')*/
 
 function foodButtonsOff() {
 	foodButtons.forEach(button => {
 		button.classList.remove('selected')
 	})
 }
-meatButton.addEventListener('click', () => {
-	// console.log('meatButton click 1: ', meatButton.className)
-	foodButtonsOff()
-	// console.log('meatButton click 2: ', meatButton.className)
-	meatButton.classList.add('selected')
-	// console.log('meatButton click 3: ', meatButton.className)
+
+foodButtons.forEach(button => {
+	button.addEventListener('click', event => {
+		foodButtonsOff()
+		event.target.classList.add('selected')
+	})
 })
-fishButton.addEventListener('click', () => {
+
+
+/*meatButton.addEventListener('click', () => {
 	foodButtonsOff()
-	fishButton.classList.add('selected')
+	meatButton.classList.add('selected')
+})
+fishButton.addEventListener('click', (event) => {
+	foodButtonsOff()
+	event.target.classList.add('selected')
+	// fishButton.classList.add('selected')
 })
 vegButton.addEventListener('click', () => {
 	foodButtonsOff()
 	vegButton.classList.add('selected')
-})
+})*/
 
 
 // Dynamiskt skapa element
