@@ -1,0 +1,31 @@
+.hide-show-container {
+	border: 2px dashed purple;
+	background-color: rgb(255, 192, 242);
+	border-radius: 0.3em;
+	margin: 1.5em 0 0 0;
+	padding: 0.5em;
+
+	button {
+		border: 2px solid rgb(36, 15, 176);
+		background-color: rgb(36, 15, 176);
+		color: white;
+		transition: all 0.5s;
+
+		&:hover {
+			background-color: rgb(94, 76, 212);
+		}
+
+		&:disabled {
+			background-color: transparent;
+			cursor: not-allowed;
+			color: black;
+		}
+		&:disabled:hover {
+			box-shadow: inset 0 0 1em rgb(94, 76, 212);
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
